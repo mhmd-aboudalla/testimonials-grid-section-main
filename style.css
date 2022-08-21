@@ -21,7 +21,7 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 320px;
+    width: 80vw;
 }
 
 .post {
@@ -84,13 +84,13 @@ body {
 
 .jeanette{
     background: white;
-    color: hsl(217, 19%, 35%);;
+    color: hsl(217, 19%, 35%);
     grid-area: jeanette;
 }
 
 .kira {
     background: white;
-    color: hsl(217, 19%, 35%);;
+    color: hsl(217, 19%, 35%);
     grid-area: kira;
 }
 
@@ -105,18 +105,28 @@ body {
 }
 
 
+@media only screen and (min-width: 769px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(7, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "daniel daniel daniel daniel daniel jonathan jonathan" 
+        "jeanette jeanette patrick patrick patrick patrick patrick"
+        "kira kira kira kira kira kira kira" ;
+        column-gap: 2vw;
+    }
+
+    .daniel>img {
+        right: 7vw;
+    }
+}
+
+
 @media only screen and (min-width: 1024px) {
     .container {
-        width: 80vw;
-        display: grid;
         grid-template-columns: repeat(7, auto);
         grid-template-rows: repeat(2, auto);
         grid-template-areas: "daniel daniel daniel daniel daniel jonathan kira" 
         "jeanette patrick patrick patrick patrick patrick kira" ;
-        column-gap: 2vw;
-    }
-    
-    .daniel>img {
-        right: 7vw;
     }
 }
